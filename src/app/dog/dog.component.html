@@ -1,0 +1,11 @@
+<div class="container">
+    <button (click)="getDog()">-&gt; Novo Cachorro &lt;-</button>
+    <div class="dogDiv" *ngIf="this.dog">
+        <figure class="imgContainer">
+            <img id="imageDog" [src]="this.dog.url" alt=>
+            <figcaption>Image Size</figcaption>
+        </figure>
+
+        <p>{{(this.dog.fileSizeBytes / 1024 / 1024).toFixed(2)}}mB</p>
+    </div>
+</div>
